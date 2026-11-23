@@ -13,6 +13,7 @@ const NON_INDEXABLE_ROUTES = new Set([
   '/404.html',
   '/404/',
   '/spring-retreat/',
+  '/womens-gathering/',
 ]);
 
 const errors = [];

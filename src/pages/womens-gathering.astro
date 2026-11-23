@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { url } from '../lib/url';
+---
+
+<BaseLayout
+  title="Women's Gathering"
+  description="Details for The Crossing's Women's Gathering, including schedule, location, and how to join us."
+  indexable={false}
+>
+  <PageHeader
+    title="Women's Gathering"
+    eyebrow="Gathering"
+    subtitle="Details for our Women's Gathering are coming soon."
+    breadcrumbs={[{ label: "Women's Gathering" }]}
+  />
+
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="border-l-2 border-accent pl-6 space-y-4">
+      <p class="text-base leading-relaxed text-stone-700">
+        We are preparing the Women's Gathering schedule, location, and details. Please check back soon, or contact the church office for the latest updates.
+      </p>
+      <div class="flex flex-wrap gap-3 pt-2">
+        <a
+          href={url('/contact-us')}
+          class="inline-flex items-center rounded-lg bg-obsidian px-5 py-2.5 text-sm font-bold text-white hover:bg-slate-dark transition-colors"
+        >
+          Contact Us
+        </a>
+        <a
+          href={url('/')}
+          class="inline-flex items-center rounded-lg border border-stone-300 px-5 py-2.5 text-sm font-semibold text-stone-800 hover:bg-stone-100 transition-colors"
+        >
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
