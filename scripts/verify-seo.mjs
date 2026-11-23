@@ -12,6 +12,7 @@ const NON_INDEXABLE_ROUTES = new Set([
   '/sermons/kingdom-come-matthew-page-3/',
   '/404.html',
   '/404/',
+  '/spring-retreat/',
 ]);
 
 const errors = [];
