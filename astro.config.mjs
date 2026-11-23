@@ -12,6 +12,8 @@ const EXCLUDED_SITEMAP_PATHS = new Set([
   '/thecrossing.website/sermons/kingdom-come-matthew-page-3/',
   '/thecrossing.website/404',
   '/thecrossing.website/404/',
+  '/thecrossing.website/spring-retreat',
+  '/thecrossing.website/spring-retreat/',
 ]);
 
 export default defineConfig({
