@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { url } from '../../lib/url';
+---
+
+<BaseLayout
+  title="Summer Church Picnic"
+  description="Join The Crossing family for our annual Summer Church Picnic on Saturday, July 18, 2026 at Memorial Park in Hayward."
+  image="/images/community/church-family-picnic.webp"
+  imageAlt="Church families enjoying fellowship and food together at an outdoor picnic"
+>
+  <PageHeader
+    title="Summer Church Picnic"
+    eyebrow="Community Gathering • July 18, 2026"
+    subtitle="Join us for a day of food, fellowship, and fun as we celebrate God's faithfulness and our church family together."
+    backgroundImage="/images/community/church-family-picnic.webp"
+    breadcrumbs={[{ label: 'Events', href: '/events' }, { label: 'Summer Church Picnic' }]}
+  />
+
+  <section class="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8 space-y-12">
+    <!-- Event Overview -->
+    <div class="grid gap-8 md:grid-cols-12 md:items-start">
+      <div class="md:col-span-7 space-y-4">
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">All Ages Welcome</p>
+        <h2 class="font-display text-2xl font-extrabold text-stone-900 sm:text-3xl">A Day of Fellowship</h2>
+        <p class="text-sm leading-relaxed text-stone-700">
+Our annual Summer Church Picnic is a cherished tradition where The Crossing family gathers for a relaxed afternoon of food, games, and worship outdoors. Whether you're a long-time member or visiting for the first time, we invite you to join us at Memorial Park for a day celebrating community and God's goodness.
+ <em>Bring a side dish to share!</em></p>
+        <p class="text-sm leading-relaxed text-stone-700">
+          Bring your lawn chairs and blankets! We'll provide the main dishes and drinks—just bring a side dish, salad, or dessert to share. Kids and youth can enjoy field games, volleyball, and activities led by our ministry teams.
+        </p>
+        <blockquote class="border-l-2 border-stone-300 pl-4 font-serif italic text-base text-stone-600">
+          "They devoted themselves to the apostles' teaching and to fellowship, to the breaking of bread and to prayer."
+          <cite class="block mt-2 not-italic font-sans text-xs font-medium uppercase tracking-wider text-stone-500">— Acts 2:42</cite>
+        </blockquote>
+      </div>
+
+      <div class="md:col-span-5">
+        <div class="rounded-xl border-l-2 border-accent bg-stone-100 p-6 space-y-3">
+          <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">Event Details</p>
+          <div class="space-y-2 text-sm text-stone-700">
+            <p><strong>Date:</strong> Saturday, July 18, 2026</p>
+            <p><strong>Time:</strong> 11:30 AM – 3:00 PM</p>
+            <p>
+              <strong>Location:</strong> Memorial Park<br />
+              <span class="text-stone-600">24176 Mission Blvd, Hayward, CA 94544</span><br />
+              <a
+                href="https://www.google.com/maps/place/Memorial+Park/@37.6703,-122.0785,15z"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-semibold text-accent-hover underline inline-flex items-center gap-1"
+              >
+                View Map &nearr;
+              </a>
+            </p>
+            <p class="pt-2 text-xs text-stone-600">
+              <strong>What to Bring:</strong> Lawn chair or blanket, side dish/salad/dessert to share, sunscreen, and outdoor games if you'd like!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schedule -->
+    <div class="grid divide-y divide-stone-300 border-y border-stone-300 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+      <div class="py-8 sm:pr-6 space-y-2">
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-accent-hover">11:30 AM</p>
+        <h3 class="font-display text-lg font-bold text-stone-900">Arrival & Setup</h3>
+        <p class="text-sm text-stone-600">
+          Arrive and help set up tables, chairs, and canopies. Drop off your potluck contributions at the food tables.
+        </p>
+      </div>
+      <div class="py-8 sm:px-6 space-y-2">
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-accent-hover">12:00 PM</p>
+        <h3 class="font-display text-lg font-bold text-stone-900">Lunch & Fellowship</h3>
+        <p class="text-sm text-stone-600">
+          Enjoy a potluck-style meal together. We'll provide grilled burgers, hot dogs, and beverages.
+        </p>
+      </div>
+      <div class="py-8 sm:pl-6 space-y-2">
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-accent-hover">1:00 PM – 3:00 PM</p>
+        <h3 class="font-display text-lg font-bold text-stone-900">Games & Activities</h3>
+        <p class="text-sm text-stone-600">
+          Field games for kids and youth, volleyball, frisbee, board games, and open time for fellowship.
+        </p>
+      </div>
+    </div>
+
+    <!-- Potluck Sign-Up Banner -->
+    <div class="rounded-xl border border-stone-800 bg-obsidian p-8 text-white sm:p-10 lg:flex lg:items-center lg:justify-between lg:gap-8">
+      <div class="max-w-2xl space-y-2">
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent">Bring a Dish to Share</p>
+        <h2 class="font-display text-2xl font-extrabold sm:text-3xl">Potluck Sign-Up</h2>
+        <p class="text-sm text-stone-300">
+          Help us plan by signing up for what you'll bring! We'll provide the main dishes—you bring sides, salads, fruit, drinks, or desserts.
+        </p>
+      </div>
+      <div class="mt-6 lg:mt-0 shrink-0">
+        <a
+          href={url('/contact-us')}
+          class="inline-flex items-center rounded-xl bg-accent px-6 py-3 text-sm font-bold text-obsidian hover:bg-accent-hover transition-colors"
+        >
+          RSVP & Sign Up &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Volunteer Opportunities -->
+    <div>
+      <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">Serve Together</p>
+      <h2 class="mt-1 font-display text-2xl font-extrabold text-stone-900">We Need Your Help!</h2>
+      <div class="mt-6 grid divide-y divide-stone-300 border-y border-stone-300 sm:grid-cols-2 sm:divide-x sm:divide-y-0">
+        <div class="py-6 sm:pr-6 space-y-2">
+          <h3 class="font-display text-base font-bold text-stone-900">Setup & Cleanup Crew</h3>
+          <p class="text-sm text-stone-600">
+            Arrive early (10:30 AM) to help set up canopies, tables, and chairs, or stay after (3:00 PM) to help pack up and clean the park.
+          </p>
+        </div>
+        <div class="py-6 sm:pl-6 space-y-2">
+          <h3 class="font-display text-base font-bold text-stone-900">Games & Activities Leaders</h3>
+          <p class="text-sm text-stone-600">
+            Help lead field games, organize volleyball, or supervise kids' activities. Great for youth leaders and volunteers!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Parking & Amenities -->
+    <div class="grid gap-6 sm:grid-cols-2">
+      <div class="border-l-2 border-stone-900 pl-6 space-y-2">
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">Park Information</p>
+        <h3 class="font-display text-lg font-bold text-stone-900">Parking & Facilities</h3>
+        <p class="text-sm leading-relaxed text-stone-600">
+          Memorial Park has ample free parking. Restrooms and picnic tables are available throughout the park. We'll be gathering near the main pavilion area.
+        </p>
+      </div>
+      <div class="border-l-2 border-stone-300 pl-6 space-y-2">
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">Weather Plan</p>
+        <h3 class="font-display text-lg font-bold text-stone-900">Rain or Shine</h3>
+        <p class="text-sm leading-relaxed text-stone-600">
+          We'll meet rain or shine! In case of severe weather, we'll announce any changes via our church email list and social media by Friday evening.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact & Bottom CTA -->
+    <div class="border-l-2 border-stone-900 pl-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div class="space-y-1 text-sm text-stone-700">
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">Questions?</p>
+        <p>
+          Contact our Events Coordinator <strong>Bonnie Wu</strong> (<a href="mailto:bwu512@gmail.com" class="font-semibold text-accent-hover underline">bwu512@gmail.com</a>) or the <a href={url('/contact-us')} class="font-semibold text-accent-hover underline">Church Office</a> for more information.
+        </p>
+      </div>
+      <a
+        href={url('/contact-us')}
+        class="shrink-0 inline-flex items-center justify-center rounded-xl bg-accent px-5 py-2.5 text-sm font-bold text-obsidian hover:bg-accent-hover transition-colors"
+      >
+        RSVP Now &rarr;
+      </a>
+    </div>
+  </section>
+</BaseLayout>
