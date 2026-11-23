@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'When does church start?',
-    html: 'Our worship service runs from <strong>9:30 to 10:45 AM every Sunday</strong> in the Worship Center’s Main Sanctuary, followed by a time of refreshments from <strong>10:45 to 11:15 AM</strong>. At <strong>11:15 AM</strong>, we have Christian Education (CE) classes until about <strong>12:30 PM</strong>, when we share lunch together at church.',
+    html: 'Our worship service runs from <strong>9:30 to 10:45 AM every Sunday</strong> in the Worship Center’s Main Sanctuary, followed by <strong>coffee and refreshments from 10:45 to 11:15 AM</strong>. At <strong>11:15 AM</strong>, we have Christian Education (CE) classes until about <strong>12:30 PM</strong>, when we share lunch together at church.',
   },
   {
     q: 'Where are you located?',
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'Where can I park?',
-    html: `Free Sunday parking is available in our main lot (Lot A), with reserved visitor and handicap spaces near the entrance. See our <a href="${url('/im-new/our-campus')}" class="font-semibold text-accent-hover underline">Campus &amp; Parking Map</a>.`,
+    html: `<strong>Visitor parking is free!</strong> Our main lot (Lot A) offers free Sunday parking, with reserved visitor and handicap spaces near the entrance. See our <a href="${url('/im-new/our-campus')}" class="font-semibold text-accent-hover underline">Campus &amp; Parking Map</a>.`,
   },
   {
     q: 'What should I expect on Sunday?',
@@ -107,6 +107,7 @@ const faqs = [
           <p class="text-xs font-bold uppercase tracking-widest text-accent">Sunday Service</p>
           <h3 class="font-display text-xl font-bold">9:30 AM &bull; Main Sanctuary</h3>
           <p class="text-sm text-stone-300">{SITE.address.full}</p>
+          <p class="text-sm text-stone-300">Visitor parking is free, and coffee is served after service.</p>
           <p class="text-sm text-stone-300">Childcare is available during the 9:30 AM service.</p>
           <p class="text-xs text-stone-400">
             Questions before Sunday? Call <a href={SITE.phoneHref} class="text-stone-200 underline">{SITE.phone}</a> or email{' '}
