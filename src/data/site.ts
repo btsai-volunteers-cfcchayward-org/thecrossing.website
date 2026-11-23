@@ -60,7 +60,6 @@ export const NAV_ITEMS: NavItem[] = [
     href: '/events',
     children: [
       { label: 'Upcoming Events', href: '/events', description: 'Weekly gatherings, classes, and announcements' },
-      { label: 'Summer Church Picnic', href: '/events/summer-picnic', description: 'Annual church family picnic' },
     ],
   },
   {
