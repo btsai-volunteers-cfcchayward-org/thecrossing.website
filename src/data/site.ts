@@ -61,7 +61,7 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { label: 'Upcoming Events', href: '/events', description: 'Weekly gatherings, classes, and announcements' },
       { label: 'Bigfoot Youth Retreat', href: '/events/bigfoot', description: '2027 Winter Youth Camp at Redwood Glen' },
-      { label: "Men's Retreat", href: '/events/mens-retreat', description: 'Annual retreat at Redwood Glen' },
+      { label: 'Summer Church Picnic', href: '/events/summer-picnic', description: 'Annual church family picnic' },
     ],
   },
   {
