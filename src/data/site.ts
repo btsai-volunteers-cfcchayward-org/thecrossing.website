@@ -87,6 +87,7 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'RightNow Media', href: '/resources/rightnow-media', description: 'Free video Bible study library' },
       { label: 'Audiobooks on Hoopla', href: '/resources/audiobooks-on-hoopla', description: 'Free Christian audiobooks' },
       { label: 'How to Practice Lent', href: '/resources/how-to-practice-lent', description: 'Seasonal devotional guide' },
+      { label: 'Poetry', href: '/resources/poetry', description: 'Poems for reflection and worship' },
     ],
   },
   {
