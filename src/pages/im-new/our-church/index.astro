@@ -5,10 +5,6 @@ import { url } from '../../../lib/url';
 
 const values = [
   {
-    title: "Experience God's Truth",
-    desc: 'Rooted in Scripture as the supreme authority for faith and life.',
-  },
-  {
     title: 'Reach People',
     desc: 'Sharing the truth and grace of Jesus across the East Bay Area.',
   },
@@ -77,9 +73,14 @@ const values = [
       <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">Core Commitments</p>
       <h2 class="mt-1 font-display text-2xl font-extrabold text-stone-900">Our Core Values</h2>
       <div class="mt-6 grid divide-y divide-stone-300 border-y border-stone-300 sm:grid-cols-2 lg:grid-cols-3 sm:divide-y-0">
+        <div class="border-stone-300 py-6 sm:p-6 sm:border-b lg:[&:nth-child(n+4)]:border-b-0 sm:[&:nth-child(n+5)]:border-b-0">
+          <p class="font-mono text-xs text-accent-hover">01</p>
+          <h3 class="mt-1 font-display text-base font-bold text-stone-900">Experience God's Truth</h3>
+          <p class="mt-2 text-sm text-stone-600">Rooted in Scripture as the supreme authority for faith and life.</p>
+        </div>
         {values.map((v, idx) => (
           <div class="border-stone-300 py-6 sm:p-6 sm:border-b lg:[&:nth-child(n+4)]:border-b-0 sm:[&:nth-child(n+5)]:border-b-0">
-            <p class="font-mono text-xs text-accent-hover">0{idx + 1}</p>
+            <p class="font-mono text-xs text-accent-hover">0{idx + 2}</p>
             <h3 class="mt-1 font-display text-base font-bold text-stone-900">{v.title}</h3>
             <p class="mt-2 text-sm text-stone-600">{v.desc}</p>
           </div>
