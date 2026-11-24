@@ -8,13 +8,6 @@ const scheduleEmbed =
   'https://docs.google.com/spreadsheets/d/1lsuomS3ifwFyo0NsKC6M33LbSWk8u-krvo3neEpscc8/htmlembed';
 const scheduleOpen =
   'https://docs.google.com/spreadsheets/d/1lsuomS3ifwFyo0NsKC6M33LbSWk8u-krvo3neEpscc8/pubhtml';
-
-const previousClasses = [
-  { title: 'Shepherding 101', href: '/resources/ce/shepherding-101', desc: 'Equipping small group leaders and shepherds.' },
-  { title: 'Together CE', href: '/resources/ce/together-ce', desc: 'RightNow Media video series on community.' },
-  { title: 'Why Believe? CE', href: '/resources/ce/why-believe', desc: 'Apologetics and exploring Christian faith.' },
-  { title: 'You and Me Forever', href: '/resources/ce/you-and-me-forever', desc: 'Marriage and eternity by Francis & Lisa Chan.' },
-];
 ---
 
 <BaseLayout title="Christian Education" description="Sunday 11:15 AM Christian Education workshops and classes at The Crossing.">
@@ -60,17 +53,42 @@ const previousClasses = [
     <div>
       <h2 class="font-display text-2xl font-extrabold text-stone-900">Previous Classes</h2>
       <div class="mt-5 grid gap-5 sm:grid-cols-2">
-        {previousClasses.map((c) => (
           <a
-            href={url(c.href)}
+            href={url('/resources/ce/shepherding-101')}
             class="group rounded-2xl border border-stone-200 bg-white p-6 shadow-xs transition-all hover:border-accent/50 hover:shadow-md"
           >
             <h3 class="font-display text-lg font-bold text-stone-900 group-hover:text-accent-hover transition-colors">
-              {c.title} &rarr;
+              Shepherding 101 &rarr;
             </h3>
-            <p class="mt-1.5 text-sm text-stone-600">{c.desc}</p>
+            <p class="mt-1.5 text-sm text-stone-600">Equipping small group leaders and shepherds.</p>
           </a>
-        ))}
+          <a
+            href={url('/resources/ce/together-ce')}
+            class="group rounded-2xl border border-stone-200 bg-white p-6 shadow-xs transition-all hover:border-accent/50 hover:shadow-md"
+          >
+            <h3 class="font-display text-lg font-bold text-stone-900 group-hover:text-accent-hover transition-colors">
+              Together CE &rarr;
+            </h3>
+            <p class="mt-1.5 text-sm text-stone-600">RightNow Media video series on community.</p>
+          </a>
+          <a
+            href={url('/resources/ce/why-believe')}
+            class="group rounded-2xl border border-stone-200 bg-white p-6 shadow-xs transition-all hover:border-accent/50 hover:shadow-md"
+          >
+            <h3 class="font-display text-lg font-bold text-stone-900 group-hover:text-accent-hover transition-colors">
+              Why Believe? CE &rarr;
+            </h3>
+            <p class="mt-1.5 text-sm text-stone-600">Apologetics and exploring Christian faith.</p>
+          </a>
+          <a
+            href={url('/resources/ce/you-and-me-forever')}
+            class="group rounded-2xl border border-stone-200 bg-white p-6 shadow-xs transition-all hover:border-accent/50 hover:shadow-md"
+          >
+            <h3 class="font-display text-lg font-bold text-stone-900 group-hover:text-accent-hover transition-colors">
+              You and Me Forever &rarr;
+            </h3>
+            <p class="mt-1.5 text-sm text-stone-600">Marriage and eternity by Francis &amp; Lisa Chan.</p>
+          </a>
       </div>
     </div>
   </section>

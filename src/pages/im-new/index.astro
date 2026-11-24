@@ -5,49 +5,6 @@ import YouTubeEmbed from '../../components/YouTubeEmbed.astro';
 import EmbedFrame from '../../components/EmbedFrame.astro';
 import { SITE } from '../../data/site';
 import { url } from '../../lib/url';
-
-const faqs = [
-  {
-    q: 'Who are you?',
-    html: `The Crossing is the English-speaking ministry of <strong>Chinese For Christ Church of Hayward (CFCC)</strong> — a non-denominational, evangelical Christian church in the East Bay Area, CA, with a heart to be multi-generational and multicultural. Learn more on our <a href="${url('/im-new/our-church')}" class="font-semibold text-accent-hover underline">Our Church</a> page.`,
-  },
-  {
-    q: 'When does church start?',
-    html: 'Our worship service runs from <strong>9:30 to 10:45 AM every Sunday</strong> in the Worship Center’s Main Sanctuary, followed by <strong>coffee and refreshments from 10:45 to 11:15 AM</strong>. At <strong>11:15 AM</strong>, we have Christian Education (CE) classes until about <strong>12:30 PM</strong>, when we share lunch together at church.',
-  },
-  {
-    q: 'Where are you located?',
-    html: 'Sunday worship is at <strong>157 Smalley Ave in Hayward, CA</strong> (campus signage reads <em>Chinese For Christ Church of Hayward</em>). Signs and greeters will help direct you to our service.',
-  },
-  {
-    q: 'Where can I park?',
-    html: `<strong>Visitor parking is free!</strong> Our main lot (Lot A) offers free Sunday parking, with reserved visitor and handicap spaces near the entrance. See our <a href="${url('/im-new/our-campus')}" class="font-semibold text-accent-hover underline">Campus &amp; Parking Map</a>.`,
-  },
-  {
-    q: 'What should I expect on Sunday?',
-    html: 'Expect a 75-minute service with live music and singing, friendly people who will make you feel welcomed, gospel-centered and biblically based messages, programs for kids, and a place to be yourself and meet new friends.',
-  },
-  {
-    q: 'What should I wear?',
-    html: 'Casual dress is perfectly welcome! Wear whatever makes you comfortable — jeans, a t-shirt, business casual, or anything in between. You are welcome here.',
-  },
-  {
-    q: 'Is there something for my kids & teens?',
-    html: `Yes! Childcare is available during the 9:30 AM service. We also have <a href="${url('/get-connected/children')}" class="font-semibold text-accent-hover underline">The Rock Children’s Ministry</a> (Nursery – 5th grade) on Sundays at 9:30 AM — no advance registration required; simply arrive at the Worship Center before service and our greeters will be happy to assist you. Middle &amp; High School students (Grades 6–12) join Sunday worship at 9:30 AM and meet for Sunday CE at 11:15 AM.`,
-  },
-  {
-    q: 'How do I get connected?',
-    html: `We have weekly groups throughout the week based on your life stage — including Growth Groups, <a href="${url('/get-connected/youth')}" class="font-semibold text-accent-hover underline">Footprints Youth</a> (Fridays at 7:30 PM), Young Adults, Mature Adults, and Discipleship. Explore them on <a href="${url('/get-connected')}" class="font-semibold text-accent-hover underline">Get Connected</a>.`,
-  },
-  {
-    q: 'Am I expected to give anything?',
-    html: 'No! We pray that you will connect with God through worship and enjoy meeting people. As our guest, please don’t feel any obligation to give.',
-  },
-  {
-    q: 'Can I stream the service online?',
-    html: `Yes! We prioritize gathering in person, and we also livestream on our <a href="${SITE.social.youtubeStreams}" target="_blank" rel="noopener noreferrer" class="font-semibold text-accent-hover underline">YouTube Channel</a> for those experiencing hardship to attend in-person.`,
-  },
-];
 ---
 
 <BaseLayout title="I'm New" description="Plan your first visit to The Crossing at CFCC Hayward. Sundays at 9:30 AM.">
@@ -68,17 +25,11 @@ const faqs = [
           Frequently Asked <span class="font-serif italic font-normal">Questions</span>
         </h2>
         <div class="mt-6 divide-y divide-stone-300 border-y border-stone-300">
-          {faqs.map((item, idx) => (
-            <details
-              open={idx < 2}
-              class="group py-5"
-            >
+            <details open class="group py-5">
               <summary class="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-stone-900 list-none">
                 <span class="flex items-baseline gap-3">
-                  <span class="font-mono text-xs font-medium text-stone-400">
-                    {String(idx + 1).padStart(2, '0')}
-                  </span>
-                  <span>{item.q}</span>
+                  <span class="font-mono text-xs font-medium text-stone-400">01</span>
+                  <span>Who are you?</span>
                 </span>
                 <span
                   class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-transform group-open:rotate-45 group-open:border-stone-900"
@@ -89,9 +40,161 @@ const faqs = [
                   </svg>
                 </span>
               </summary>
-              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600" set:html={item.html} />
+              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600">The Crossing is the English-speaking ministry of <strong>Chinese For Christ Church of Hayward (CFCC)</strong> — a non-denominational, evangelical Christian church in the East Bay Area, CA, with a heart to be multi-generational and multicultural. Learn more on our <a href={url('/im-new/our-church')} class="font-semibold text-accent-hover underline">Our Church</a> page.</p>
             </details>
-          ))}
+            <details open class="group py-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-stone-900 list-none">
+                <span class="flex items-baseline gap-3">
+                  <span class="font-mono text-xs font-medium text-stone-400">02</span>
+                  <span>When does church start?</span>
+                </span>
+                <span
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-transform group-open:rotate-45 group-open:border-stone-900"
+                  aria-hidden="true"
+                >
+                  <svg class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600">Our worship service runs from <strong>9:30 to 10:45 AM every Sunday</strong> in the Worship Center’s Main Sanctuary, followed by <strong>coffee and refreshments from 10:45 to 11:15 AM</strong>. At <strong>11:15 AM</strong>, we have Christian Education (CE) classes until about <strong>12:30 PM</strong>, when we share lunch together at church.</p>
+            </details>
+            <details class="group py-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-stone-900 list-none">
+                <span class="flex items-baseline gap-3">
+                  <span class="font-mono text-xs font-medium text-stone-400">03</span>
+                  <span>Where are you located?</span>
+                </span>
+                <span
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-transform group-open:rotate-45 group-open:border-stone-900"
+                  aria-hidden="true"
+                >
+                  <svg class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600">Sunday worship is at <strong>157 Smalley Ave in Hayward, CA</strong> (campus signage reads <em>Chinese For Christ Church of Hayward</em>). Signs and greeters will help direct you to our service.</p>
+            </details>
+            <details class="group py-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-stone-900 list-none">
+                <span class="flex items-baseline gap-3">
+                  <span class="font-mono text-xs font-medium text-stone-400">04</span>
+                  <span>Where can I park?</span>
+                </span>
+                <span
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-transform group-open:rotate-45 group-open:border-stone-900"
+                  aria-hidden="true"
+                >
+                  <svg class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600"><strong>Visitor parking is free!</strong> Our main lot (Lot A) offers free Sunday parking, with reserved visitor and handicap spaces near the entrance. See our <a href={url('/im-new/our-campus')} class="font-semibold text-accent-hover underline">Campus &amp; Parking Map</a>.</p>
+            </details>
+            <details class="group py-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-stone-900 list-none">
+                <span class="flex items-baseline gap-3">
+                  <span class="font-mono text-xs font-medium text-stone-400">05</span>
+                  <span>What should I expect on Sunday?</span>
+                </span>
+                <span
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-transform group-open:rotate-45 group-open:border-stone-900"
+                  aria-hidden="true"
+                >
+                  <svg class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600">Expect a 75-minute service with live music and singing, friendly people who will make you feel welcomed, gospel-centered and biblically based messages, programs for kids, and a place to be yourself and meet new friends.</p>
+            </details>
+            <details class="group py-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-stone-900 list-none">
+                <span class="flex items-baseline gap-3">
+                  <span class="font-mono text-xs font-medium text-stone-400">06</span>
+                  <span>What should I wear?</span>
+                </span>
+                <span
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-transform group-open:rotate-45 group-open:border-stone-900"
+                  aria-hidden="true"
+                >
+                  <svg class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600">Casual dress is perfectly welcome! Wear whatever makes you comfortable — jeans, a t-shirt, business casual, or anything in between. You are welcome here.</p>
+            </details>
+            <details class="group py-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-stone-900 list-none">
+                <span class="flex items-baseline gap-3">
+                  <span class="font-mono text-xs font-medium text-stone-400">07</span>
+                  <span>Is there something for my kids &amp; teens?</span>
+                </span>
+                <span
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-transform group-open:rotate-45 group-open:border-stone-900"
+                  aria-hidden="true"
+                >
+                  <svg class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600">Yes! Childcare is available during the 9:30 AM service. We also have <a href={url('/get-connected/children')} class="font-semibold text-accent-hover underline">The Rock Children’s Ministry</a> (Nursery – 5th grade) on Sundays at 9:30 AM — no advance registration required; simply arrive at the Worship Center before service and our greeters will be happy to assist you. Middle &amp; High School students (Grades 6–12) join Sunday worship at 9:30 AM and meet for Sunday CE at 11:15 AM.</p>
+            </details>
+            <details class="group py-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-stone-900 list-none">
+                <span class="flex items-baseline gap-3">
+                  <span class="font-mono text-xs font-medium text-stone-400">08</span>
+                  <span>How do I get connected?</span>
+                </span>
+                <span
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-transform group-open:rotate-45 group-open:border-stone-900"
+                  aria-hidden="true"
+                >
+                  <svg class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600">We have weekly groups throughout the week based on your life stage — including Growth Groups, <a href={url('/get-connected/youth')} class="font-semibold text-accent-hover underline">Footprints Youth</a> (Fridays at 7:30 PM), Young Adults, Mature Adults, and Discipleship. Explore them on <a href={url('/get-connected')} class="font-semibold text-accent-hover underline">Get Connected</a>.</p>
+            </details>
+            <details class="group py-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-stone-900 list-none">
+                <span class="flex items-baseline gap-3">
+                  <span class="font-mono text-xs font-medium text-stone-400">09</span>
+                  <span>Am I expected to give anything?</span>
+                </span>
+                <span
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-transform group-open:rotate-45 group-open:border-stone-900"
+                  aria-hidden="true"
+                >
+                  <svg class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600">No! We pray that you will connect with God through worship and enjoy meeting people. As our guest, please don’t feel any obligation to give.</p>
+            </details>
+            <details class="group py-5">
+              <summary class="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-stone-900 list-none">
+                <span class="flex items-baseline gap-3">
+                  <span class="font-mono text-xs font-medium text-stone-400">10</span>
+                  <span>Can I stream the service online?</span>
+                </span>
+                <span
+                  class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-stone-300 text-stone-700 transition-transform group-open:rotate-45 group-open:border-stone-900"
+                  aria-hidden="true"
+                >
+                  <svg class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M8 3v10M3 8h10" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-3 pl-7 text-sm leading-relaxed text-stone-600">Yes! We prioritize gathering in person, and we also livestream on our <a href="https://www.youtube.com/@cfccofhayward/streams" target="_blank" rel="noopener noreferrer" class="font-semibold text-accent-hover underline">YouTube Channel</a> for those experiencing hardship to attend in-person.</p>
+            </details>
         </div>
       </div>
 

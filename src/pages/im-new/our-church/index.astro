@@ -2,33 +2,6 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHeader from '../../../components/PageHeader.astro';
 import { url } from '../../../lib/url';
-
-const values = [
-  {
-    title: "Experience God's Truth",
-    desc: 'Rooted in Scripture as the supreme authority for faith and life.',
-  },
-  {
-    title: 'Reach People',
-    desc: 'Sharing the truth and grace of Jesus across the East Bay Area.',
-  },
-  {
-    title: 'Authentic Community',
-    desc: 'Building genuine, accountable relationships across life stages.',
-  },
-  {
-    title: 'Maximize Involvement',
-    desc: 'Equipping every member to serve with their God-given gifts.',
-  },
-  {
-    title: 'Family Across Generations & Cultures',
-    desc: 'Crossing generational and cultural lines together in Christ.',
-  },
-  {
-    title: 'Worship God',
-    desc: 'Honoring God in Sunday gathering and everyday mission.',
-  },
-];
 ---
 
 <BaseLayout title="Our Church" description="Learn about The Crossing at Chinese For Christ Church of Hayward.">
@@ -77,13 +50,36 @@ const values = [
       <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">Core Commitments</p>
       <h2 class="mt-1 font-display text-2xl font-extrabold text-stone-900">Our Core Values</h2>
       <div class="mt-6 grid divide-y divide-stone-300 border-y border-stone-300 sm:grid-cols-2 lg:grid-cols-3 sm:divide-y-0">
-        {values.map((v, idx) => (
-          <div class="border-stone-300 py-6 sm:p-6 sm:border-b lg:[&:nth-child(n+4)]:border-b-0 sm:[&:nth-child(n+5)]:border-b-0">
-            <p class="font-mono text-xs text-accent-hover">0{idx + 1}</p>
-            <h3 class="mt-1 font-display text-base font-bold text-stone-900">{v.title}</h3>
-            <p class="mt-2 text-sm text-stone-600">{v.desc}</p>
-          </div>
-        ))}
+        <div class="border-stone-300 py-6 sm:p-6 sm:border-b lg:[&:nth-child(n+4)]:border-b-0 sm:[&:nth-child(n+5)]:border-b-0">
+          <p class="font-mono text-xs text-accent-hover">01</p>
+          <h3 class="mt-1 font-display text-base font-bold text-stone-900">Experience God's Truth</h3>
+          <p class="mt-2 text-sm text-stone-600">Rooted in Scripture as the supreme authority for faith and life.</p>
+        </div>
+        <div class="border-stone-300 py-6 sm:p-6 sm:border-b lg:[&:nth-child(n+4)]:border-b-0 sm:[&:nth-child(n+5)]:border-b-0">
+          <p class="font-mono text-xs text-accent-hover">02</p>
+          <h3 class="mt-1 font-display text-base font-bold text-stone-900">Reach People</h3>
+          <p class="mt-2 text-sm text-stone-600">Sharing the truth and grace of Jesus across the East Bay Area.</p>
+        </div>
+        <div class="border-stone-300 py-6 sm:p-6 sm:border-b lg:[&:nth-child(n+4)]:border-b-0 sm:[&:nth-child(n+5)]:border-b-0">
+          <p class="font-mono text-xs text-accent-hover">03</p>
+          <h3 class="mt-1 font-display text-base font-bold text-stone-900">Authentic Community</h3>
+          <p class="mt-2 text-sm text-stone-600">Building genuine, accountable relationships across life stages.</p>
+        </div>
+        <div class="border-stone-300 py-6 sm:p-6 sm:border-b lg:[&:nth-child(n+4)]:border-b-0 sm:[&:nth-child(n+5)]:border-b-0">
+          <p class="font-mono text-xs text-accent-hover">04</p>
+          <h3 class="mt-1 font-display text-base font-bold text-stone-900">Maximize Involvement</h3>
+          <p class="mt-2 text-sm text-stone-600">Equipping every member to serve with their God-given gifts.</p>
+        </div>
+        <div class="border-stone-300 py-6 sm:p-6 sm:border-b lg:[&:nth-child(n+4)]:border-b-0 sm:[&:nth-child(n+5)]:border-b-0">
+          <p class="font-mono text-xs text-accent-hover">05</p>
+          <h3 class="mt-1 font-display text-base font-bold text-stone-900">Family Across Generations &amp; Cultures</h3>
+          <p class="mt-2 text-sm text-stone-600">Crossing generational and cultural lines together in Christ.</p>
+        </div>
+        <div class="border-stone-300 py-6 sm:p-6 sm:border-b lg:[&:nth-child(n+4)]:border-b-0 sm:[&:nth-child(n+5)]:border-b-0">
+          <p class="font-mono text-xs text-accent-hover">06</p>
+          <h3 class="mt-1 font-display text-base font-bold text-stone-900">Worship God</h3>
+          <p class="mt-2 text-sm text-stone-600">Honoring God in Sunday gathering and everyday mission.</p>
+        </div>
       </div>
     </div>
 

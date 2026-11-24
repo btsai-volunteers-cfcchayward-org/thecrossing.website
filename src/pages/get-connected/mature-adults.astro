@@ -2,25 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import { url } from '../../lib/url';
-
-const values = [
-  {
-    name: 'Safety',
-    desc: 'We pursue an environment and culture that is spiritually and emotionally safe for all group members.',
-  },
-  {
-    name: 'Authenticity',
-    desc: 'Growth takes place when followers of Christ are genuinely transparent with God and one another.',
-  },
-  {
-    name: 'Humility',
-    desc: 'Willingness to give and receive constructive feedback and support is essential to spiritual health.',
-  },
-  {
-    name: 'Growth',
-    desc: "God's desire and plan is that every believer continually grows in maturity in Christ.",
-  },
-];
 ---
 
 <BaseLayout title="Mature Adults" description="Mature Adults Group at The Crossing — Fridays 7:30 PM.">
@@ -59,13 +40,26 @@ const values = [
       <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">Core Commitments</p>
       <h2 class="mt-1 font-display text-2xl font-extrabold text-stone-900">What We Value</h2>
       <div class="mt-6 grid divide-y divide-stone-300 border-y border-stone-300 sm:grid-cols-2 sm:divide-y-0">
-        {values.map((v, idx) => (
           <div class="border-stone-300 py-6 sm:p-6 sm:odd:border-r sm:[&:nth-child(-n+2)]:border-b">
-            <p class="font-mono text-xs text-stone-400">0{idx + 1}</p>
-            <h3 class="mt-1 font-display text-lg font-bold text-stone-900">{v.name}</h3>
-            <p class="mt-2 text-sm text-stone-600">{v.desc}</p>
+            <p class="font-mono text-xs text-stone-400">01</p>
+            <h3 class="mt-1 font-display text-lg font-bold text-stone-900">Safety</h3>
+            <p class="mt-2 text-sm text-stone-600">We pursue an environment and culture that is spiritually and emotionally safe for all group members.</p>
           </div>
-        ))}
+          <div class="border-stone-300 py-6 sm:p-6 sm:odd:border-r sm:[&:nth-child(-n+2)]:border-b">
+            <p class="font-mono text-xs text-stone-400">02</p>
+            <h3 class="mt-1 font-display text-lg font-bold text-stone-900">Authenticity</h3>
+            <p class="mt-2 text-sm text-stone-600">Growth takes place when followers of Christ are genuinely transparent with God and one another.</p>
+          </div>
+          <div class="border-stone-300 py-6 sm:p-6 sm:odd:border-r sm:[&:nth-child(-n+2)]:border-b">
+            <p class="font-mono text-xs text-stone-400">03</p>
+            <h3 class="mt-1 font-display text-lg font-bold text-stone-900">Humility</h3>
+            <p class="mt-2 text-sm text-stone-600">Willingness to give and receive constructive feedback and support is essential to spiritual health.</p>
+          </div>
+          <div class="border-stone-300 py-6 sm:p-6 sm:odd:border-r sm:[&:nth-child(-n+2)]:border-b">
+            <p class="font-mono text-xs text-stone-400">04</p>
+            <h3 class="mt-1 font-display text-lg font-bold text-stone-900">Growth</h3>
+            <p class="mt-2 text-sm text-stone-600">God's desire and plan is that every believer continually grows in maturity in Christ.</p>
+          </div>
       </div>
     </div>
   </section>

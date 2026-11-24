@@ -4,16 +4,6 @@ import PageHeader from '../../components/PageHeader.astro';
 import EmbedFrame from '../../components/EmbedFrame.astro';
 import { SITE } from '../../data/site';
 import { url } from '../../lib/url';
-
-const rooms = [
-  { name: 'Main Sanctuary', location: 'Worship Center (Main Floor)', use: 'Sunday 9:30 AM Worship Service' },
-  { name: 'Children’s Center (The Rock)', location: '1st Floor', use: 'Sunday 9:30 AM Kids Check-In & Mon–Thu Homework Club' },
-  { name: 'Room 107', location: 'Worship Center (1st Floor)', use: 'Transparent Young Adults (Thu) & Mature Adults (Fri)' },
-  { name: 'Youth Center', location: '2nd Floor', use: 'Footprints Youth Group (Fridays 7:30 PM)' },
-  { name: 'Room 201', location: '2nd Floor', use: 'Middle School Christian Education (Sundays 11:15 AM)' },
-  { name: 'Room 202', location: '2nd Floor', use: 'Adult Christian Education (Sundays 11:15 AM)' },
-  { name: 'Room 204', location: '2nd Floor', use: 'High School Christian Education (Sundays 11:15 AM)' },
-];
 ---
 
 <BaseLayout title="Our Campus" description="Campus map, parking lots, room directory, and directions to The Crossing at 157 Smalley Ave, Hayward, CA.">
@@ -56,13 +46,41 @@ const rooms = [
       <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">Building Guide</p>
       <h2 class="mt-1 font-display text-2xl font-bold text-stone-900">Campus Room Directory</h2>
       <div class="mt-5 divide-y divide-stone-300 border-y border-stone-300">
-        {rooms.map((r) => (
           <div class="grid gap-1 py-3.5 sm:grid-cols-3 sm:gap-4 text-sm">
-            <div class="font-bold text-stone-900">{r.name}</div>
-            <div class="text-stone-600">{r.location}</div>
-            <div class="text-stone-600">{r.use}</div>
+            <div class="font-bold text-stone-900">Main Sanctuary</div>
+            <div class="text-stone-600">Worship Center (Main Floor)</div>
+            <div class="text-stone-600">Sunday 9:30 AM Worship Service</div>
           </div>
-        ))}
+          <div class="grid gap-1 py-3.5 sm:grid-cols-3 sm:gap-4 text-sm">
+            <div class="font-bold text-stone-900">Children’s Center (The Rock)</div>
+            <div class="text-stone-600">1st Floor</div>
+            <div class="text-stone-600">Sunday 9:30 AM Kids Check-In &amp; Mon–Thu Homework Club</div>
+          </div>
+          <div class="grid gap-1 py-3.5 sm:grid-cols-3 sm:gap-4 text-sm">
+            <div class="font-bold text-stone-900">Room 107</div>
+            <div class="text-stone-600">Worship Center (1st Floor)</div>
+            <div class="text-stone-600">Transparent Young Adults (Thu) &amp; Mature Adults (Fri)</div>
+          </div>
+          <div class="grid gap-1 py-3.5 sm:grid-cols-3 sm:gap-4 text-sm">
+            <div class="font-bold text-stone-900">Youth Center</div>
+            <div class="text-stone-600">2nd Floor</div>
+            <div class="text-stone-600">Footprints Youth Group (Fridays 7:30 PM)</div>
+          </div>
+          <div class="grid gap-1 py-3.5 sm:grid-cols-3 sm:gap-4 text-sm">
+            <div class="font-bold text-stone-900">Room 201</div>
+            <div class="text-stone-600">2nd Floor</div>
+            <div class="text-stone-600">Middle School Christian Education (Sundays 11:15 AM)</div>
+          </div>
+          <div class="grid gap-1 py-3.5 sm:grid-cols-3 sm:gap-4 text-sm">
+            <div class="font-bold text-stone-900">Room 202</div>
+            <div class="text-stone-600">2nd Floor</div>
+            <div class="text-stone-600">Adult Christian Education (Sundays 11:15 AM)</div>
+          </div>
+          <div class="grid gap-1 py-3.5 sm:grid-cols-3 sm:gap-4 text-sm">
+            <div class="font-bold text-stone-900">Room 204</div>
+            <div class="text-stone-600">2nd Floor</div>
+            <div class="text-stone-600">High School Christian Education (Sundays 11:15 AM)</div>
+          </div>
       </div>
     </div>
 

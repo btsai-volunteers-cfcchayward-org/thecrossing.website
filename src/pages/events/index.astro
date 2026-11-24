@@ -7,63 +7,6 @@ import { url } from '../../lib/url';
 
 const calendarEmbed =
   'https://calendar.google.com/calendar/embed?color=%234986e7&color=%237bd148&color=%239fe1e7&color=%23b99aff&color=%23cabdbf&color=%23cca6ac&color=%23fbe983&deb=-&embed_style=WyJhdDplbWI6c3QiLCIjZTBlMGUwIiwiI2VkZWRlZCIsIiM0MTg0ZjMiLCJyb2JvdG8iLCIjNjM2MzYzIiw1MDAsIiNmZmYiXQo&eopt=0&mode=agenda&showCalendars=1&showPrint=0&showTabs=0&showTitle=0&showTz=0&src=79bpk9dptkcanc5mgqo1peirik@group.calendar.google.com&src=growthgroupscore@gmail.com&src=kacp3oilnt7pcnn9bchegc7jvo@group.calendar.google.com&src=kbotfggkikjs94n0snnfmc1blk@group.calendar.google.com&src=m6sf13an5t6t81nacfuno3b23k@group.calendar.google.com&src=r8disfa4um1mkg959bqsr3e0qg@group.calendar.google.com&src=ukbuk9rds072469p64srcmie68@group.calendar.google.com&ctz=America/Los_Angeles';
-
-const announcements = [
-  {
-    title: 'Fall Kickoff Sunday (9/13)',
-    date: 'Sunday, Sep 13, 2026',
-    desc: 'Join The Crossing family as we kick off the fall season together. More details will be shared soon.',
-    actionLabel: 'Contact Us for Details',
-    actionHref: url('/contact-us'),
-  },
-  {
-    title: 'Membership Class (11/22)',
-    date: 'Sunday, Nov 22 • 11:15 AM',
-    desc: 'For those learning to follow Jesus, apply for church membership, or be baptized on Thanksgiving Sunday (11/29), this 3-week class concludes with P. Josh, 11:15 AM this Sunday in Room 201.',
-    actionLabel: 'Email Church Office',
-    actionHref: 'mailto:church.office@cfcchayward.org?subject=Membership%20Class',
-  },
-  {
-    title: 'Thanksgiving Celebration Dinner and Fellowship (11/21)',
-    date: 'Saturday, Nov 21 • 5:00 PM',
-    desc: 'Join us Saturday for a 5 PM potluck dinner, followed by programs 6:30–8 PM for children, youth, and The Crossing. Sign up online to bring a dish, or donate $5. Volunteers welcome to help set up chairs and tables at 4:15 PM (contact Bonnie, General Affairs Deacon).',
-    actionLabel: 'Potluck Sign-Up Link',
-    actionHref: 'https://docs.google.com/forms/d/e/1FAIpQLSdhDQL0k-qcjfJB8wVcy-IebLlu4vrdaYuOytE8OhfsWxpfvQ/viewform?usp=preview',
-  },
-  {
-    title: 'Thanksgiving Potluck (11/22)',
-    date: 'Sunday, Nov 22, 2026',
-    desc: 'Join The Crossing family for a Thanksgiving potluck together. Time and location details will be shared soon.',
-    actionLabel: 'Contact Us for Details',
-    actionHref: url('/contact-us'),
-  },
-  {
-    title: 'BG Thanksgiving Delivery (11/22)',
-    date: 'Sunday, Nov 22 • 11:15 AM',
-    desc: 'During this season of Thanksgiving and with some food programs facing uncertainty, Bridging Grace invites you to share Jesus’ love through extra support for our neighbors in need. Pray, donate, or serve at our Annual Thanksgiving Delivery Day at 11:15 AM in the Youth Center. Sign up to volunteer with Lori de St. Aubin, or if you know someone in need contact Mindy at bridginggrace@gmail.com.',
-    actionLabel: 'Email Bridging Grace',
-    actionHref: 'mailto:bridginggrace@gmail.com?subject=Bridging%20Grace%20Delivery',
-  },
-  {
-    title: 'Quarterly Break (11/25–28)',
-    date: 'Nov 25 – Nov 28',
-    desc: 'There are no official fellowship or Growth Group gatherings next week due to the holiday break. Join us for Thanksgiving worship & baptisms at 9:30 AM next Sunday, 11/29.',
-  },
-  {
-    title: 'Alameda Food Bank (11/29 – 1/3)',
-    date: 'Nov 29 – Jan 3',
-    desc: 'Donate canned or dried pantry goods to bless families in need this holiday season. Red collection barrels will be located in the Lobby and Fellowship Hall.',
-    actionLabel: 'See Serving Teams',
-    actionHref: url('/get-connected/serve'),
-  },
-  {
-    title: 'Hospitality Meeting (12/6)',
-    date: 'Sunday, Dec 6 • 11:15 AM – 12:15 PM',
-    desc: 'All team members, please attend this training and appreciation in Room 107, 11:15 AM – 12:15 PM that Sunday.',
-    actionLabel: 'Join Hospitality Team',
-    actionHref: url('/get-connected/serve'),
-  },
-];
 ---
 
 <BaseLayout title="Events" description="Upcoming events, Sunday worship, Christian Education, and church announcements at The Crossing.">
@@ -112,22 +55,39 @@ const announcements = [
         </a>
       </div>
       <div class="mt-6 divide-y divide-stone-300 border-y border-stone-300">
-        {announcements.map((item) => (
-          <article class="grid gap-3 py-6 sm:grid-cols-12 sm:items-baseline sm:gap-6">
-            <p class="font-mono text-xs font-medium uppercase tracking-wider text-accent-hover sm:col-span-3">{item.date}</p>
-            <div class="sm:col-span-6">
-              <h3 class="font-display text-lg font-bold text-stone-900">{item.title}</h3>
-              <p class="mt-1.5 text-sm leading-relaxed text-stone-600">{item.desc}</p>
-            </div>
-            <div class="sm:col-span-3 sm:text-right">
-              {item.actionHref && item.actionLabel && (
-                <a href={item.actionHref} class="inline-block font-mono text-xs font-medium uppercase tracking-wider text-stone-900 hover:text-accent-hover">
-                  {item.actionLabel} &rarr;
-                </a>
-              )}
-            </div>
-          </article>
-        ))}
+        <article class="grid gap-3 py-6 sm:grid-cols-12 sm:items-baseline sm:gap-6">
+          <p class="font-mono text-xs font-medium uppercase tracking-wider text-accent-hover sm:col-span-3">Nov 25 – Nov 28</p>
+          <div class="sm:col-span-6">
+            <h3 class="font-display text-lg font-bold text-stone-900">Quarterly Break (11/25–28)</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-stone-600">There are no official fellowship or Growth Group gatherings next week due to the holiday break. Join us for Thanksgiving worship &amp; baptisms at 9:30 AM next Sunday, 11/29.</p>
+          </div>
+          <div class="sm:col-span-3 sm:text-right">
+          </div>
+        </article>
+        <article class="grid gap-3 py-6 sm:grid-cols-12 sm:items-baseline sm:gap-6">
+          <p class="font-mono text-xs font-medium uppercase tracking-wider text-accent-hover sm:col-span-3">Nov 29 – Jan 3</p>
+          <div class="sm:col-span-6">
+            <h3 class="font-display text-lg font-bold text-stone-900">Alameda Food Bank (11/29 – 1/3)</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-stone-600">Donate canned or dried pantry goods to bless families in need this holiday season. Red collection barrels will be located in the Lobby and Fellowship Hall.</p>
+          </div>
+          <div class="sm:col-span-3 sm:text-right">
+            <a href={url('/get-connected/serve')} class="inline-block font-mono text-xs font-medium uppercase tracking-wider text-stone-900 hover:text-accent-hover">
+              See Serving Teams &rarr;
+            </a>
+          </div>
+        </article>
+        <article class="grid gap-3 py-6 sm:grid-cols-12 sm:items-baseline sm:gap-6">
+          <p class="font-mono text-xs font-medium uppercase tracking-wider text-accent-hover sm:col-span-3">Sunday, Dec 6 • 11:15 AM – 12:15 PM</p>
+          <div class="sm:col-span-6">
+            <h3 class="font-display text-lg font-bold text-stone-900">Hospitality Meeting (12/6)</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-stone-600">All team members, please attend this training and appreciation in Room 107, 11:15 AM – 12:15 PM that Sunday.</p>
+          </div>
+          <div class="sm:col-span-3 sm:text-right">
+            <a href={url('/get-connected/serve')} class="inline-block font-mono text-xs font-medium uppercase tracking-wider text-stone-900 hover:text-accent-hover">
+              Join Hospitality Team &rarr;
+            </a>
+          </div>
+        </article>
       </div>
     </div>
     <!-- Family Care, Prayer & Lobby Resources -->

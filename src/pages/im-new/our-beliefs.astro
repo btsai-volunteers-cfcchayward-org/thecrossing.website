@@ -2,39 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import { url } from '../../lib/url';
-
-const beliefs = [
-  {
-    title: 'God & The Trinity',
-    statement:
-      'We believe that all things are created by God. We believe that the Godhead eternally exists in three persons — the Father, the Son, and the Holy Spirit — and that these three are one God.',
-  },
-  {
-    title: 'Scripture',
-    statement:
-      'We believe that "all Scripture is given by the inspiration of God." We believe that the Bible is the supreme authority in all matters of faith and conduct.',
-  },
-  {
-    title: 'Jesus Christ',
-    statement:
-      'We believe that Jesus Christ, our Lord, is the only Son of God. We believe in His virgin birth, atoning death, and bodily resurrection, in His ascension to the Father, and in His personal return in power and glory.',
-  },
-  {
-    title: 'Salvation',
-    statement:
-      'We believe the truth of "justification by faith." We are saved by the grace of Jesus Christ through faith.',
-  },
-  {
-    title: 'The Church & Sacraments',
-    statement:
-      'We believe in the one Holy Universal Church, which is the Body of Christ and to which all believers belong, and in its mission to witness concerning its Head, Jesus Christ, preaching the Gospel among all nations. We believe that baptism and the Lord’s Supper are the two most important sacraments and ordinances of the Church, and that they are the scriptural means of the testimony for the Church in this age.',
-  },
-  {
-    title: 'Humanity & Dignity',
-    statement:
-      'We believe that people are created with dignity in the image of God, which defines human identity, gender, and marriage, yet suffer from being fallen and sinful by nature and by choice.',
-  },
-];
 ---
 
 <BaseLayout title="Our Beliefs" description="Core Christian beliefs of The Crossing at CFCC Hayward.">
@@ -47,15 +14,48 @@ const beliefs = [
 
   <section class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
     <div class="divide-y divide-stone-300 border-y border-stone-300">
-      {beliefs.map((b, idx) => (
-        <article class="grid gap-4 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
-          <div class="sm:col-span-4 flex items-baseline gap-3">
-            <span class="font-mono text-xs font-medium text-accent-hover">0{idx + 1}</span>
-            <h2 class="font-display text-xl font-bold text-stone-900">{b.title}</h2>
-          </div>
-          <p class="sm:col-span-8 text-base leading-relaxed text-stone-700">{b.statement}</p>
-        </article>
-      ))}
+      <article class="grid gap-4 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+        <div class="sm:col-span-4 flex items-baseline gap-3">
+          <span class="font-mono text-xs font-medium text-accent-hover">01</span>
+          <h2 class="font-display text-xl font-bold text-stone-900">God &amp; The Trinity</h2>
+        </div>
+        <p class="sm:col-span-8 text-base leading-relaxed text-stone-700">We believe that all things are created by God. We believe that the Godhead eternally exists in three persons — the Father, the Son, and the Holy Spirit — and that these three are one God.</p>
+      </article>
+      <article class="grid gap-4 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+        <div class="sm:col-span-4 flex items-baseline gap-3">
+          <span class="font-mono text-xs font-medium text-accent-hover">02</span>
+          <h2 class="font-display text-xl font-bold text-stone-900">Scripture</h2>
+        </div>
+        <p class="sm:col-span-8 text-base leading-relaxed text-stone-700">We believe that "all Scripture is given by the inspiration of God." We believe that the Bible is the supreme authority in all matters of faith and conduct.</p>
+      </article>
+      <article class="grid gap-4 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+        <div class="sm:col-span-4 flex items-baseline gap-3">
+          <span class="font-mono text-xs font-medium text-accent-hover">03</span>
+          <h2 class="font-display text-xl font-bold text-stone-900">Jesus Christ</h2>
+        </div>
+        <p class="sm:col-span-8 text-base leading-relaxed text-stone-700">We believe that Jesus Christ, our Lord, is the only Son of God. We believe in His virgin birth, atoning death, and bodily resurrection, in His ascension to the Father, and in His personal return in power and glory.</p>
+      </article>
+      <article class="grid gap-4 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+        <div class="sm:col-span-4 flex items-baseline gap-3">
+          <span class="font-mono text-xs font-medium text-accent-hover">04</span>
+          <h2 class="font-display text-xl font-bold text-stone-900">Salvation</h2>
+        </div>
+        <p class="sm:col-span-8 text-base leading-relaxed text-stone-700">We believe the truth of "justification by faith." We are saved by the grace of Jesus Christ through faith.</p>
+      </article>
+      <article class="grid gap-4 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+        <div class="sm:col-span-4 flex items-baseline gap-3">
+          <span class="font-mono text-xs font-medium text-accent-hover">05</span>
+          <h2 class="font-display text-xl font-bold text-stone-900">The Church &amp; Sacraments</h2>
+        </div>
+        <p class="sm:col-span-8 text-base leading-relaxed text-stone-700">We believe in the one Holy Universal Church, which is the Body of Christ and to which all believers belong, and in its mission to witness concerning its Head, Jesus Christ, preaching the Gospel among all nations. We believe that baptism and the Lord’s Supper are the two most important sacraments and ordinances of the Church, and that they are the scriptural means of the testimony for the Church in this age.</p>
+      </article>
+      <article class="grid gap-4 py-8 sm:grid-cols-12 sm:gap-8 sm:py-10">
+        <div class="sm:col-span-4 flex items-baseline gap-3">
+          <span class="font-mono text-xs font-medium text-accent-hover">06</span>
+          <h2 class="font-display text-xl font-bold text-stone-900">Humanity &amp; Dignity</h2>
+        </div>
+        <p class="sm:col-span-8 text-base leading-relaxed text-stone-700">We believe that people are created with dignity in the image of God, which defines human identity, gender, and marriage, yet suffer from being fallen and sinful by nature and by choice.</p>
+      </article>
     </div>
 
     <div class="mt-10 border-l-2 border-accent pl-5 space-y-2 text-sm text-stone-700">
