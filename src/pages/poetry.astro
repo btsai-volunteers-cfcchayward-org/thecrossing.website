@@ -112,18 +112,21 @@ const poems = [
     breadcrumbs={[{ label: 'Poetry' }]}
   />
 
-  <section class="mx-auto max-w-4xl px-4 pt-8 pb-4 sm:px-6 lg:px-8">
+  <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="divide-y divide-stone-300 border-y border-stone-300">
-      {poems.map((poem) => (
-        <article class="grid gap-6 py-12 md:grid-cols-[220px_1fr] md:gap-12">
-          <div>
-            <p class="font-mono text-xs uppercase tracking-[0.18em] text-stone-500">{poem.author}</p>
-            <p class="mt-2 text-sm leading-relaxed text-stone-600">{poem.dates}</p>
-          </div>
-          <div>
-            <h2 class="font-serif text-3xl leading-tight text-stone-900">{poem.title}</h2>
-            {poem.stanzas.map((stanza) => (
-              <p class="mt-5 font-serif text-xl leading-relaxed text-stone-800">
+      {poems.map((poem, idx) => (
+        <article class="poem-row py-14">
+          <header class="poem-meta">
+            <p class="font-mono text-xs uppercase tracking-[0.18em] text-accent">
+              {String(idx + 1).padStart(2, '0')} / {String(poems.length).padStart(2, '0')}
+            </p>
+            <h2 class="mt-4 font-serif text-4xl leading-[1.05] text-stone-900">{poem.title}</h2>
+            <p class="mt-5 font-mono text-xs uppercase tracking-[0.14em] text-stone-600">{poem.author}</p>
+            <p class="mt-1 text-sm leading-relaxed text-stone-500">{poem.dates}</p>
+          </header>
+          <div class="poem-body">
+            {poem.stanzas.map((stanza, sIdx) => (
+              <p class={`font-serif text-2xl leading-snug text-stone-800 ${sIdx > 0 ? 'mt-8' : ''}`}>
                 {stanza.map((line, i) => (
                   <>
                     {i > 0 && <br />}
@@ -160,3 +163,26 @@ const poems = [
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .poem-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .poem-meta {
+    flex: 0 0 auto;
+  }
+  .poem-body {
+    flex: 1 1 auto;
+  }
+  @media (min-width: 48rem) {
+    .poem-row {
+      flex-direction: row;
+      gap: 4rem;
+    }
+    .poem-meta {
+      width: 20rem;
+    }
+  }
+</style>
