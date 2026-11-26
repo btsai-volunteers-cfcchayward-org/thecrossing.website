@@ -12,11 +12,12 @@ const formView =
 
 <BaseLayout title="Contact Us" description="Get in touch with The Crossing at CFCC Hayward.">
   <PageHeader
-    title="Contact Us"
-    eyebrow="Get in Touch"
-    subtitle="Have questions about Sunday worship, small groups, or prayer requests? We'd love to hear from you."
     breadcrumbs={[{ label: 'Contact Us' }]}
-  />
+  >
+    Contact Us
+    <Fragment slot="eyebrow">Get in Touch</Fragment>
+    <Fragment slot="subtitle">Have questions about Sunday worship, small groups, or prayer requests? We'd love to hear from you.</Fragment>
+  </PageHeader>
 
   <section class="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8 space-y-10">
     <div class="grid divide-y divide-stone-300 border-y border-stone-300 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
@@ -40,10 +41,11 @@ const formView =
 
     <EmbedFrame
       src={formSrc}
-      title="Contact The Crossing"
       heightClass="h-[720px]"
       openLabel="Open Google Form"
       openHref={formView}
-    />
+    >
+      Contact The Crossing
+    </EmbedFrame>
   </section>
 </BaseLayout>

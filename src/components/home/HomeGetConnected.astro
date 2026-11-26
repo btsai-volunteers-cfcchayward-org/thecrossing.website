@@ -1,0 +1,190 @@
+---
+import { url } from '../../lib/url';
+---
+
+<section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+  <div class="grid gap-12 lg:grid-cols-12 lg:items-start">
+    <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-5">
+      <p class="font-mono text-xs font-semibold uppercase tracking-widest text-accent-hover">Community</p>
+      <h2 class="font-display text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl">
+        Connect with <span class="font-serif font-normal italic">our church family.</span>
+      </h2>
+      <p class="text-base leading-relaxed text-stone-600">
+        Explore our weekly ministries for children, youth, young adults, adult Growth Groups, and discipleship.
+      </p>
+      <div class="flex flex-col gap-2.5 pt-2 text-sm font-bold">
+        <a href={url('/get-connected/serve')} class="text-accent-hover hover:underline">
+          Serve on a Sunday or outreach team &rarr;
+        </a>
+        <a href={url('/resources/after-school-program')} class="text-stone-900 hover:text-accent-hover transition-colors">
+          Free Kids Homework Club (K–7th) &rarr;
+        </a>
+        <a href={url('/events')} class="text-stone-900 hover:text-accent-hover transition-colors">
+          View upcoming events &amp; calendar &rarr;
+        </a>
+        <a href={url('/get-connected')} class="text-stone-900 hover:text-accent-hover transition-colors">
+          Explore all ministries &rarr;
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-8 grid gap-6 sm:grid-cols-2">
+        <a
+          href={url('/get-connected/growth-groups')}
+          class="group flex flex-col justify-between overflow-hidden rounded-xl border border-stone-300 bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-stone-900"
+        >
+          <div>
+            <div class="aspect-[16/10] w-full overflow-hidden bg-stone-100">
+              <img
+                src={url('/images/community/growth-group-home.webp')}
+                alt="Growth Groups"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 object-center"
+              />
+            </div>
+            <div class="p-5 pb-2">
+              <p class="font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-hover">Cross-Generational</p>
+              <h3 class="mt-1.5 font-display text-xl font-bold text-stone-900 group-hover:text-accent-hover transition-colors">
+                Growth Groups
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">Weekly home Bible studies to grow transformationally in Christ, relationally in His family, and missionally in the East Bay.</p>
+            </div>
+          </div>
+          <p class="px-5 pb-5 pt-3 font-mono text-xs font-semibold uppercase tracking-wider text-stone-900 group-hover:text-accent-hover">
+            Learn more &rarr;
+          </p>
+        </a>
+        <a
+          href={url('/get-connected/children')}
+          class="group flex flex-col justify-between overflow-hidden rounded-xl border border-stone-300 bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-stone-900"
+        >
+          <div>
+            <div class="aspect-[16/10] w-full overflow-hidden bg-stone-100">
+              <img
+                src={url('/images/community/children-class.webp')}
+                alt="Children (The Rock)"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 object-top"
+              />
+            </div>
+            <div class="p-5 pb-2">
+              <p class="font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-hover">Nursery – 5th Grade</p>
+              <h3 class="mt-1.5 font-display text-xl font-bold text-stone-900 group-hover:text-accent-hover transition-colors">
+                Children (The Rock)
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">Fun, safe, gospel-centered Sunday morning and Friday night (Shining Stars) programs where kids encounter and know Jesus.</p>
+            </div>
+          </div>
+          <p class="px-5 pb-5 pt-3 font-mono text-xs font-semibold uppercase tracking-wider text-stone-900 group-hover:text-accent-hover">
+            Learn more &rarr;
+          </p>
+        </a>
+        <a
+          href={url('/get-connected/youth')}
+          class="group flex flex-col justify-between overflow-hidden rounded-xl border border-stone-300 bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-stone-900"
+        >
+          <div>
+            <div class="aspect-[16/10] w-full overflow-hidden bg-stone-100">
+              <img
+                src={url('/images/community/youth-hangout.webp')}
+                alt="Youth (Footprints)"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 object-top"
+              />
+            </div>
+            <div class="p-5 pb-2">
+              <p class="font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-hover">Grades 6–12 • Fridays 7:30 PM</p>
+              <h3 class="mt-1.5 font-display text-xl font-bold text-stone-900 group-hover:text-accent-hover transition-colors">
+                Youth (Footprints)
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">Wild games, real friendship, and honest conversations about life and God on the 2nd floor Youth Center.</p>
+            </div>
+          </div>
+          <p class="px-5 pb-5 pt-3 font-mono text-xs font-semibold uppercase tracking-wider text-stone-900 group-hover:text-accent-hover">
+            Learn more &rarr;
+          </p>
+        </a>
+        <a
+          href={url('/get-connected/young-adults')}
+          class="group flex flex-col justify-between overflow-hidden rounded-xl border border-stone-300 bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-stone-900"
+        >
+          <div>
+            <div class="aspect-[16/10] w-full overflow-hidden bg-stone-100">
+              <img
+                src={url('/images/community/young-adults-park.webp')}
+                alt="Young Adults (Transparent)"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 object-center"
+              />
+            </div>
+            <div class="p-5 pb-2">
+              <p class="font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-hover">College &amp; Career • Thursdays 7:45 PM</p>
+              <h3 class="mt-1.5 font-display text-xl font-bold text-stone-900 group-hover:text-accent-hover transition-colors">
+                Young Adults (Transparent)
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">A community of young adults meeting in Room 107 to study, worship, pray, and live out a visible faith.</p>
+            </div>
+          </div>
+          <p class="px-5 pb-5 pt-3 font-mono text-xs font-semibold uppercase tracking-wider text-stone-900 group-hover:text-accent-hover">
+            Learn more &rarr;
+          </p>
+        </a>
+        <a
+          href={url('/get-connected/mature-adults')}
+          class="group flex flex-col justify-between overflow-hidden rounded-xl border border-stone-300 bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-stone-900"
+        >
+          <div>
+            <div class="aspect-[16/10] w-full overflow-hidden bg-stone-100">
+              <img
+                src={url('/images/community/mature-adults-group.webp')}
+                alt="Mature Adults"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 object-center"
+              />
+            </div>
+            <div class="p-5 pb-2">
+              <p class="font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-hover">Fridays 7:30 PM</p>
+              <h3 class="mt-1.5 font-display text-xl font-bold text-stone-900 group-hover:text-accent-hover transition-colors">
+                Mature Adults
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">Support, encouragement, Bible study, and prayer for married or single adults and parents in Room 107.</p>
+            </div>
+          </div>
+          <p class="px-5 pb-5 pt-3 font-mono text-xs font-semibold uppercase tracking-wider text-stone-900 group-hover:text-accent-hover">
+            Learn more &rarr;
+          </p>
+        </a>
+        <a
+          href={url('/get-connected/discipleship')}
+          class="group flex flex-col justify-between overflow-hidden rounded-xl border border-stone-300 bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-stone-900"
+        >
+          <div>
+            <div class="aspect-[16/10] w-full overflow-hidden bg-stone-100">
+              <img
+                src={url('/images/community/discipleship-bible.webp')}
+                alt="Discipleship"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 object-center"
+              />
+            </div>
+            <div class="p-5 pb-2">
+              <p class="font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-hover">1-on-1 Mentoring</p>
+              <h3 class="mt-1.5 font-display text-xl font-bold text-stone-900 group-hover:text-accent-hover transition-colors">
+                Discipleship
+              </h3>
+              <p class="mt-2 text-sm leading-relaxed text-stone-600">Intentional 10-month discipleship pairs growing together in learning, sharing, and prayer.</p>
+            </div>
+          </div>
+          <p class="px-5 pb-5 pt-3 font-mono text-xs font-semibold uppercase tracking-wider text-stone-900 group-hover:text-accent-hover">
+            Learn more &rarr;
+          </p>
+        </a>
+    </div>
+  </div>
+</section>

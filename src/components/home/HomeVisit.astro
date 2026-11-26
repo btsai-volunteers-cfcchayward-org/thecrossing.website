@@ -1,0 +1,52 @@
+---
+import EmbedFrame from '../EmbedFrame.astro';
+import { SITE } from '../../data/site';
+import { url } from '../../lib/url';
+---
+
+<section class="border-t border-stone-300 bg-white py-16 sm:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-5 space-y-4">
+        <p class="font-mono text-xs font-semibold uppercase tracking-widest text-accent-hover">Visit Us</p>
+        <h2 class="font-display text-3xl font-extrabold tracking-tight text-stone-900">
+          Join Us This Sunday
+        </h2>
+        <p class="text-base leading-relaxed text-stone-600">
+          We gather every Sunday at <strong>9:30 AM</strong> at Chinese For Christ Church of Hayward. Come as you are!
+        </p>
+        <div class="space-y-2 pt-2 text-sm text-stone-700">
+          <p><strong>Address:</strong> {SITE.address.full}</p>
+          <p><strong>Phone:</strong> <a href={SITE.phoneHref} class="underline hover:text-accent-hover">{SITE.phone}</a></p>
+          <p><strong>Email:</strong> <a href={`mailto:${SITE.email}`} class="underline hover:text-accent-hover">{SITE.email}</a></p>
+        </div>
+        <div class="flex flex-wrap gap-3 pt-3">
+          <a
+            href={SITE.address.mapsQuery}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center rounded-lg bg-obsidian px-5 py-3 text-sm font-bold text-white hover:bg-slate-dark transition-colors"
+          >
+            Get Directions
+          </a>
+          <a
+            href={url('/im-new/our-campus')}
+            class="inline-flex items-center rounded-lg border border-stone-300 px-5 py-3 text-sm font-semibold text-stone-800 hover:bg-stone-100 transition-colors"
+          >
+            Parking &amp; Campus Map
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-7">
+        <EmbedFrame
+          src={SITE.address.mapsEmbed}
+          heightClass="h-[360px]"
+          openLabel="Open in Google Maps"
+          openHref={SITE.address.mapsQuery}
+        >
+          157 Smalley Ave, Hayward, CA
+        </EmbedFrame>
+      </div>
+    </div>
+  </div>
+</section>
