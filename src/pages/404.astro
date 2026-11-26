@@ -9,11 +9,11 @@ import { url } from '../lib/url';
   description="The page you requested could not be found on The Crossing website."
   indexable={false}
 >
-  <PageHeader
-    title="Page Not Found"
-    eyebrow="404"
-    subtitle="We couldn't find the page you were looking for. It may have moved or been updated."
-  />
+  <PageHeader>
+    Page Not Found
+    <Fragment slot="eyebrow">404</Fragment>
+    <Fragment slot="subtitle">We couldn't find the page you were looking for. It may have moved or been updated.</Fragment>
+  </PageHeader>
 
   <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
     <div class="border-l-2 border-accent pl-6 space-y-4">

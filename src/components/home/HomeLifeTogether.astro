@@ -1,0 +1,74 @@
+---
+import { url } from '../../lib/url';
+---
+
+<section class="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8">
+  <div class="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+    <div>
+      <p class="font-mono text-xs font-semibold uppercase tracking-widest text-accent-hover">Life Together</p>
+      <h2 class="mt-2 font-serif text-3xl italic text-stone-900 sm:text-5xl">
+        A multi-generational family in the East Bay.
+      </h2>
+    </div>
+    <a href={url('/im-new/our-church')} class="text-sm font-bold text-stone-900 hover:text-accent-hover transition-colors">
+      Our story &amp; values &rarr;
+    </a>
+  </div>
+
+  <div class="grid gap-4 md:grid-cols-12">
+    <div class="relative overflow-clip rounded-2xl md:col-span-7 aspect-[16/11] md:aspect-auto md:min-h-[380px]">
+      <img
+        src={url('/images/community/cross-gen-redwoods.webp')}
+        alt="Multi-generational church family together at The Crossing"
+        loading="lazy"
+        decoding="async"
+        class="parallax-media h-full w-full object-cover object-[50%_45%]"
+      />
+      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-obsidian via-obsidian/85 to-transparent p-6 pt-16">
+        <p class="font-mono text-xs font-semibold uppercase tracking-widest text-amber-300">Family Across Generations</p>
+        <p class="mt-1 font-display text-lg font-bold text-white">From nursery to grandparents, growing together in Hayward.</p>
+      </div>
+    </div>
+
+    <div class="grid gap-4 md:col-span-5 grid-cols-2 md:grid-cols-1">
+      <div class="relative overflow-clip rounded-2xl aspect-[16/10]">
+        <img
+          src={url('/images/community/growth-group-home.webp')}
+          alt="Cross-generational Growth Group celebrating together at home"
+          loading="lazy"
+          decoding="async"
+          class="parallax-media h-full w-full object-cover object-center"
+        />
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-obsidian/90 via-obsidian/50 to-transparent p-4 pt-10">
+          <p class="font-display text-sm font-bold text-white">Authentic Home Community</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="relative overflow-hidden rounded-xl aspect-square">
+          <img
+            src={url('/images/community/moms-and-toddler.webp')}
+            alt="Parents and young child smiling at church event"
+            loading="lazy"
+            decoding="async"
+            class="h-full w-full object-cover object-top"
+          />
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-obsidian/95 via-obsidian/55 to-transparent p-3 pt-10">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-wider text-white">Kids &amp; Parents</p>
+          </div>
+        </div>
+        <div class="relative overflow-hidden rounded-xl aspect-square">
+          <img
+            src={url('/images/community/youth-group-cross.webp')}
+            alt="Footprints Youth Group and leaders together at The Crossing"
+            loading="lazy"
+            decoding="async"
+            class="h-full w-full object-cover object-top"
+          />
+          <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-obsidian/95 via-obsidian/55 to-transparent p-3 pt-10">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-wider text-white">Youth &amp; Disciplers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

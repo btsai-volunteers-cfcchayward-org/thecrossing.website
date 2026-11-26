@@ -1,13 +1,19 @@
 ---
+import { slotHtmlToText } from '../lib/slot-text';
+
 export interface Props {
   youtubeId: string;
-  title: string;
+  /** Optional: the visible heading can instead be passed as default slot content. */
+  title?: string;
   speaker?: string;
   date?: string;
   scripture?: string;
 }
 
-const { youtubeId, title, speaker, date, scripture } = Astro.props;
+const { youtubeId, title: titleProp, speaker, date, scripture } = Astro.props;
+const title =
+  titleProp ??
+  (Astro.slots.has('default') ? slotHtmlToText(await Astro.slots.render('default')) : '');
 const thumbUrl = `https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`;
 ---
 
@@ -42,7 +48,7 @@ const thumbUrl = `https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`;
 
   <div class="p-4">
     <h3 class="font-display text-base font-bold leading-snug text-stone-900 line-clamp-2">
-      {title}
+      <slot>{title}</slot>
     </h3>
     {(speaker || date || scripture) && (
       <p class="mt-1.5 text-xs text-stone-600">
