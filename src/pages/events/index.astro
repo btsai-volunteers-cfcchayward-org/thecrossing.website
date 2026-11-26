@@ -11,12 +11,13 @@ const calendarEmbed =
 
 <BaseLayout title="Events" description="Upcoming events, Sunday worship, Christian Education, and church announcements at The Crossing.">
   <PageHeader
-    title="Upcoming Events"
-    eyebrow="Calendar & News"
-    subtitle="Stay connected with what's happening across The Crossing — Sunday gatherings, classes, retreats, and community outreach."
     backgroundImage="/images/community/church-family-picnic.webp"
     breadcrumbs={[{ label: 'Events' }]}
-  />
+  >
+    Upcoming Events
+    <Fragment slot="eyebrow">Calendar & News</Fragment>
+    <Fragment slot="subtitle">Stay connected with what's happening across The Crossing — Sunday gatherings, classes, retreats, and community outreach.</Fragment>
+  </PageHeader>
 
   <section class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8 space-y-14">
     <!-- Weekly Schedule -->
@@ -159,10 +160,11 @@ const calendarEmbed =
       <h2 class="mb-4 font-display text-2xl font-extrabold text-stone-900">Church Calendar</h2>
       <EmbedFrame
         src={calendarEmbed}
-        title="The Crossing Church Calendar"
         heightClass="h-[580px]"
         openLabel="Open Calendar"
-      />
+      >
+        The Crossing Church Calendar
+      </EmbedFrame>
     </div>
   </section>
 </BaseLayout>

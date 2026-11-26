@@ -1,0 +1,65 @@
+---
+import { url } from '../../lib/url';
+---
+
+<section class="relative overflow-clip bg-obsidian text-white border-b border-white/10">
+  <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+    <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent">
+          Sundays 9:30 AM &bull; 157 Smalley Ave, Hayward
+        </p>
+
+        <h1 class="mt-5 font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-[4.25rem] lg:leading-[1.04]">
+          Crossing generations &amp; cultures{' '}
+          <span class="font-serif font-normal italic text-accent">together in Christ.</span>
+        </h1>
+
+        <p class="mt-6 max-w-xl text-base leading-relaxed text-stone-300 sm:text-lg">
+We are a church from singles to families, with a heart to be multi-generational and multicultural—connecting to God in authentic worship and to people in genuine relationships.
+</p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <a
+            href={url('/im-new')}
+            class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3.5 text-sm font-bold text-obsidian transition-colors hover:bg-accent-hover"
+          >
+            Plan Your Visit
+          </a>
+          <a
+            href={url('/sermons')}
+            class="inline-flex items-center justify-center rounded-lg border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+          >
+            Watch Sermons
+          </a>
+          <a
+            href={url('/get-connected')}
+            class="inline-flex items-center px-2 py-2 font-mono text-xs font-medium uppercase tracking-wider text-stone-300 transition-colors hover:text-accent"
+          >
+            Get Connected &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="relative overflow-clip rounded-2xl border border-white/15 bg-charcoal shadow-2xl">
+          <div class="aspect-[4/3] w-full overflow-clip">
+            <img
+              src={url('/images/site/hero-sanctuary.webp')}
+              alt="Sunday worship gathering at The Crossing in Hayward"
+              fetchpriority="high"
+              decoding="sync"
+              class="parallax-media h-full w-full object-cover"
+            />
+          </div>
+          <div class="flex items-center justify-between border-t border-white/10 px-5 py-3.5 text-xs">
+            <span class="font-mono uppercase tracking-wider text-stone-300">Main Sanctuary</span>
+            <a href={url('/im-new/our-campus')} class="font-semibold text-accent hover:underline">
+              Campus &amp; Parking &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

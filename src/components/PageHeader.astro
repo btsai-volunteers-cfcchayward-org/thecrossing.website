@@ -2,8 +2,11 @@
 import { absoluteUrl, url } from '../lib/url';
 
 export interface Props {
-  title: string;
+  /** Optional: the heading can instead be passed as default slot content. */
+  title?: string;
+  /** Optional: can instead be passed via `<Fragment slot="subtitle">`. */
   subtitle?: string;
+  /** Optional: can instead be passed via `<Fragment slot="eyebrow">`. */
   eyebrow?: string;
   backgroundImage?: string;
   breadcrumbs?: { label: string; href?: string }[];
@@ -16,6 +19,9 @@ const {
   backgroundImage,
   breadcrumbs = [],
 } = Astro.props;
+
+const hasEyebrow = Boolean(eyebrow) || Astro.slots.has('eyebrow');
+const hasSubtitle = Boolean(subtitle) || Astro.slots.has('subtitle');
 
 const siteOrigin = Astro.site ?? 'https://vrwarp.github.io';
 const breadcrumbSchema =
@@ -78,19 +84,19 @@ const breadcrumbSchema =
       </nav>
     )}
 
-    {eyebrow && (
+    {hasEyebrow && (
       <p class="mb-2 font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent">
-        {eyebrow}
+        <slot name="eyebrow">{eyebrow}</slot>
       </p>
     )}
 
     <h1 class="font-display text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
-      {title}
+      <slot>{title}</slot>
     </h1>
 
-    {subtitle && (
+    {hasSubtitle && (
       <p class="mt-4 max-w-2xl text-base leading-relaxed text-stone-300 sm:text-lg">
-        {subtitle}
+        <slot name="subtitle">{subtitle}</slot>
       </p>
     )}
   </div>
