@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { url } from '../../lib/url';
+
+const registerUrl = 'https://goto.thecrossing.website/bigfoot';
+const activities = [
+  'Team Games',
+  'Field Games',
+  'Talks',
+  'Music',
+  'Discussions',
+  'Hiking',
+  'Campfire',
+  'Board Games',
+  "S'mores",
+];
+---
+
+<BaseLayout
+  title="BIGFOOT 2027 Winter Youth Camp"
+  description="BIGFOOT 2027 Winter Youth Camp, February 12–15, 2027 at Redwood Glen. Four days of games, talks, hiking, and campfire for students. Register online."
+>
+  <PageHeader
+    title="BIGFOOT 2027"
+    eyebrow="Winter Youth Camp • Feb 12–15, 2027"
+    subtitle="Four days and three nights of action-packed fun, real conversation, and a huge adventure with God."
+    backgroundImage="/images/community/redwood-glen.webp"
+    breadcrumbs={[{ label: 'Events', href: '/events' }, { label: 'BIGFOOT 2027' }]}
+  />
+
+  <section class="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8 space-y-14">
+    <!-- Intro + Flyer -->
+    <div class="grid gap-10 md:grid-cols-2 md:items-start">
+      <div class="space-y-5">
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-accent-hover">01 / Welcome</p>
+        <h2 class="font-display text-2xl font-extrabold text-stone-900">More than sitting around on your phone</h2>
+        <p class="text-base leading-relaxed text-stone-700">
+          Are you looking for more out of life than just doomscrolling on your phone and doing homework? Do you want to discover real meaning and purpose in your life? Want to have tons of fun?
+        </p>
+        <p class="text-base leading-relaxed text-stone-700">
+          Then this is the camp for you. We want you to come! Join us for four days and three nights of action-packed reality, and get ready for a huge adventure.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a
+            href={registerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center rounded-lg bg-obsidian px-5 py-2.5 text-sm font-bold text-white hover:bg-slate-dark transition-colors"
+          >
+            Register Now
+          </a>
+          <a
+            href={url('/contact-us')}
+            class="inline-flex items-center rounded-lg border border-stone-300 px-5 py-2.5 text-sm font-semibold text-stone-800 hover:bg-stone-100 transition-colors"
+          >
+            Ask a Question
+          </a>
+        </div>
+      </div>
+      <figure>
+        <div class="overflow-hidden rounded-xl border border-stone-300">
+          <img
+            src={url('/images/community/bigfoot-2027-flyer.webp')}
+            alt="BIGFOOT 2027 Winter Youth Camp flyer showing February 12th to 15th, camp costs, schedule, and registration details"
+            loading="lazy"
+            decoding="async"
+            class="h-auto w-full"
+          />
+        </div>
+        <figcaption class="mt-2.5 text-xs font-medium text-stone-600">The official BIGFOOT 2027 flyer. Scan the QR code on the flyer or use the Register Now button to sign up.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Date, Location, Cost -->
+    <div class="grid divide-y divide-stone-300 border-y border-stone-300 md:grid-cols-3 md:divide-x md:divide-y-0">
+      <div class="py-7 md:pr-7 space-y-2">
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-accent-hover">02 / Date &amp; Time</p>
+        <h2 class="font-display text-lg font-bold text-stone-900">Feb 12–15, 2027</h2>
+        <p class="text-sm leading-relaxed text-stone-600">
+          President's Day weekend.<br />
+          <strong>Departs:</strong> Friday, Feb 12 at 4:30 PM<br />
+          <strong>Returns:</strong> Monday, Feb 15 at 2:00 PM
+        </p>
+      </div>
+      <div class="py-7 md:px-7 space-y-2">
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-accent-hover">03 / Location</p>
+        <h2 class="font-display text-lg font-bold text-stone-900">Redwood Glen Campsite</h2>
+        <p class="text-sm leading-relaxed text-stone-600">
+          <strong>Drop-off &amp; pick-up:</strong><br />
+          157 Smalley Ave, Hayward
+        </p>
+      </div>
+      <div class="py-7 md:pl-7 space-y-2">
+        <p class="font-mono text-xs font-medium uppercase tracking-widest text-accent-hover">04 / Camp Cost</p>
+        <h2 class="font-display text-lg font-bold text-stone-900">Early &amp; regular pricing</h2>
+        <ul class="space-y-1 text-sm text-stone-600">
+          <li><strong>$125</strong> Early, register before Dec 14</li>
+          <li><strong>$175</strong> Regular, register before Jan 11</li>
+          <li><strong>$250</strong> Late registration</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Activities -->
+    <div>
+      <p class="font-mono text-xs font-medium uppercase tracking-widest text-accent-hover">05 / What to Expect</p>
+      <h2 class="mt-2 font-display text-2xl font-extrabold text-stone-900">Games, hiking, talks, and campfire</h2>
+      <ul class="mt-6 flex flex-wrap gap-x-6 gap-y-3 border-y border-stone-300 py-6 font-display text-lg font-bold text-stone-800">
+        {activities.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Register -->
+    <div class="border-l-2 border-accent pl-6 space-y-3">
+      <p class="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent-hover">06 / Register</p>
+      <h2 class="font-display text-xl font-bold text-stone-900">Find out more and sign up</h2>
+      <p class="text-sm leading-relaxed text-stone-600">
+        Register online at{' '}
+        <a href={registerUrl} target="_blank" rel="noopener noreferrer" class="font-semibold text-accent-hover underline">goto.thecrossing.website/bigfoot</a>,
+        or contact <strong>Benson</strong> at{' '}
+        <a href="mailto:btsai@vrwarp.com" class="font-semibold text-accent-hover underline">btsai@vrwarp.com</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

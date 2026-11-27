@@ -60,6 +60,7 @@ export const NAV_ITEMS: NavItem[] = [
     href: '/events',
     children: [
       { label: 'Upcoming Events', href: '/events', description: 'Weekly gatherings, classes, and announcements' },
+      { label: 'BIGFOOT 2027 Youth Camp', href: '/events/bigfoot', description: 'Feb 12–15, 2027 at Redwood Glen' },
     ],
   },
   {
