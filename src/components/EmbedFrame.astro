@@ -1,7 +1,10 @@
 ---
+import { slotHtmlToText } from '../lib/slot-text';
+
 export interface Props {
   src: string;
-  title: string;
+  /** Optional: the visible label can instead be passed as default slot content. */
+  title?: string;
   heightClass?: string;
   openLabel?: string;
   openHref?: string;
@@ -14,11 +17,15 @@ const {
   openLabel = 'Open in new tab',
   openHref = src,
 } = Astro.props;
+
+const frameTitle =
+  title ??
+  (Astro.slots.has('default') ? slotHtmlToText(await Astro.slots.render('default')) : '');
 ---
 
 <div class="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-xs">
   <div class="flex items-center justify-between border-b border-stone-200 bg-stone-100/70 px-4 py-2.5">
-    <span class="text-xs font-semibold uppercase tracking-wider text-stone-600">{title}</span>
+    <span class="text-xs font-semibold uppercase tracking-wider text-stone-600"><slot>{title}</slot></span>
     <a
       href={openHref}
       target="_blank"
@@ -33,7 +40,7 @@ const {
   </div>
   <iframe
     src={src}
-    title={title}
+    title={frameTitle}
     loading="lazy"
     class:list={['w-full border-0 bg-white', heightClass]}
   ></iframe>

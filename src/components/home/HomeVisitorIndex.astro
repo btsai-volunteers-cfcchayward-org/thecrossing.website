@@ -1,0 +1,45 @@
+---
+import { url } from '../../lib/url';
+---
+
+<section class="border-b border-stone-300 bg-stone-50">
+  <div class="mx-auto grid max-w-7xl divide-y divide-stone-300 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+    <div class="p-6 sm:p-8 flex flex-col justify-between">
+      <div>
+        <p class="font-mono text-xs font-semibold tracking-widest text-accent-hover">01 / SUNDAY GATHERING</p>
+        <h2 class="mt-2 font-display text-xl font-bold text-stone-900">9:30 AM Every Week</h2>
+        <p class="mt-2 text-sm leading-relaxed text-stone-600">
+          Service runs 9:30–10:45 AM, followed by refreshments (10:45–11:15 AM), Christian Education (11:15 AM–12:30 PM), and lunch at church.
+        </p>
+      </div>
+      <a href={url('/im-new')} class="mt-4 inline-block font-mono text-xs font-semibold uppercase tracking-wider text-stone-900 hover:text-accent-hover">
+        Plan your visit &rarr;
+      </a>
+    </div>
+    <div class="p-6 sm:p-8 flex flex-col justify-between">
+      <div>
+        <p class="font-mono text-xs font-semibold tracking-widest text-accent-hover">02 / LOCATION &amp; PARKING</p>
+        <h2 class="mt-2 font-display text-xl font-bold text-stone-900">157 Smalley Ave</h2>
+        <p class="mt-2 text-sm leading-relaxed text-stone-600">
+          Lot A has visitor and handicap parking; regular attendees park in Lot C. Signs and greeters will help direct you.
+        </p>
+      </div>
+      <a href={url('/im-new/our-campus')} class="mt-4 inline-block font-mono text-xs font-semibold uppercase tracking-wider text-stone-900 hover:text-accent-hover">
+        Campus &amp; parking &rarr;
+      </a>
+    </div>
+    <div class="p-6 sm:p-8 flex flex-col justify-between">
+      <div>
+        <p class="font-mono text-xs font-semibold tracking-widest text-accent-hover">03 / FOR FAMILIES</p>
+        <h2 class="mt-2 font-display text-xl font-bold text-stone-900">Kids &amp; Youth</h2>
+        <p class="mt-2 text-sm leading-relaxed text-stone-600">
+          Nursery–5th grade at The Rock (Sundays 9:30 AM), plus Sunday CE for Grades 6–12 at 11:15 AM.
+        </p>
+      </div>
+      <div class="mt-4 flex flex-wrap gap-4 font-mono text-xs font-semibold uppercase tracking-wider">
+        <a href={url('/get-connected/children')} class="text-stone-900 hover:text-accent-hover">The Rock Kids &rarr;</a>
+        <a href={url('/get-connected/youth')} class="text-stone-900 hover:text-accent-hover">Footprints Youth &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
