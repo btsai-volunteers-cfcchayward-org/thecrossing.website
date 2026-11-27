@@ -14,6 +14,8 @@ const EXCLUDED_SITEMAP_PATHS = new Set([
   '/thecrossing.website/404/',
   '/thecrossing.website/spring-retreat',
   '/thecrossing.website/spring-retreat/',
+  '/thecrossing.website/events/bigfoot',
+  '/thecrossing.website/events/bigfoot/',
   '/thecrossing.website/womens-gathering',
   '/thecrossing.website/womens-gathering/',
 ]);
